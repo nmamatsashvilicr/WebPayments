@@ -1,0 +1,33 @@
+﻿@page
+@model WebPaymentsApp.Pages.MobilePaymentsModel
+@{
+ViewData["Title"] = "Mobile";
+}
+
+<h2 style="text-align:center;">მობილური გადახდები</h2>
+<div class="container-fluid">
+    <form method="post">
+        <div class="row justify-content-center align-items-center h-100 mt-2">
+            <div class="col col-sm-4 col-md-4 ">
+                <label for="inp-number">მობილურის ნომერი</label>
+                <input type="number" class="form-control" name="MobilePhone" id="inp-number" placeholder="შეიყვანეთ მობილურის ნომერი">
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center h-100 mt-2">
+            <div class="col col-sm-4 col-md-4 ">
+                <label for="inp-amount">თანხა</label>
+                <input type="text" class="form-control" name="Amount" id="inp-amount" placeholder="შეიყვანეთ თანხა">
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center h-100 mt-2">
+            <div class="d-flex justify-content-center">
+                <button type="submit"  asp-page-handler="Submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+    <div class="row justify-content-center align-items-center h-100 mt-2">
+            <div class="col col-sm-4 col-md-4 ">
+                <h3>@Model.FormMessage</h3>
+            </div>
+     </div>
+</div>

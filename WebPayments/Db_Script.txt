@@ -1,0 +1,20 @@
+CREATE DATABASE [WebPayments]
+GO
+
+USE [WebPayments]
+GO
+CREATE TABLE [WebPayments].[dbo].[WebPaymentsData](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[ServiceName] [nvarchar](500) NULL,
+	[Amount] [decimal](18, 2) NULL,
+	[FeeAmount] [decimal](18, 2) NULL,
+	[PersonalId] [varchar](11) NULL,
+	[MobilePhone] [varchar](9) NULL,
+	[Iban] [varchar](34) NULL,
+	[RegDate] [datetime] NULL,
+ CONSTRAINT [PK_WebPayments] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO

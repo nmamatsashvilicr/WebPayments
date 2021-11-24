@@ -1,0 +1,107 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+            <div class="card mb-4 box-shadow text-center">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">მობილური</h4>
+                </div>
+                <div class="card-body">
+                    
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>მობილური გადახდები</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    @*<a asp-page="MobilePaymentsModel" >Mobile Page</a>*@
+                    <form asp-page="MobilePayments" method="post">
+                        <button class="btn btn-lg btn-block btn-primary">შემდეგი</button>
+                    </form>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card mb-4 box-shadow text-center">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">ქველმოქმედება</h4>
+                </div>
+                <div class="card-body">
+                    
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>საქველმოქმედო გადახდები</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <form asp-page="Charity" method="post">
+                        <button class="btn btn-lg btn-block btn-primary char-btn">შემდეგი</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card mb-4 box-shadow text-center">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">კომუნალურები</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>კომუნალური გადახდები</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <form asp-page="Utility" method="post">
+                        <button class="btn btn-lg btn-block btn-primary pay-btn">შემდეგი</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3">
+            <div class="card mb-4 box-shadow text-center">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">ფინანსები</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>ფინანსური გადახდები</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <form asp-page="Financial" method="post">
+                        <button class="btn btn-lg btn-block btn-primary fin-btn">შემდეგი</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h3>
+            @Model.Message
+        </h3>
+    </div>
+</div>
